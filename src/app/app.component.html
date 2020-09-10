@@ -1,9 +1,101 @@
-<app-header></app-header>
+<!-- main project  -->
+
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+
+      <router-outlet></router-outlet>
     </div>
   </div>
+</div> -->
+
+
+
+
+
+
+
+<!-- <div>
+  <h4>{{counter}}</h4>
+  <div>
+    <button class="btn btn-success" (click)="onStartCount()">Start Count</button>
+    <button class="btn btn-danger" (click)="onStopCount()">Stop Count</button>
+  </div>
+</div> -->
+
+
+<!-- <p appBasicHighlight>Hello Shakir</p>
+<p appBetterHighlight [highlightColor]="'yellow'">From Better highlight</p>
+
+<div [ngSwitch]="swValue">
+  <div *ngSwitchCase="5">output 5</div>
+  <div *ngSwitchCase="1">output 1</div>
+  <div *ngSwitchCase="7">output 7</div>
+  <div *ngSwitchDefault>output default</div>
 </div>
+-->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}"
+              routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/servers">Servers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/users']">Users</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8">
+     <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div> -->
+
+
+
+
+
+<!-- angular form -->
+
+<div class=" container">
+  <form>
+    <div id="user-data">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" ngModel>
+      </div>
+      <button class="btn btn-primary shadow" type="button">Suggest a username</button>
+      <div class="form-group">
+        <label for="email">Mail</label>
+        <input type="email" id="email"
+         class="form-control"
+         ngModel
+         name="email">
+      </div>
+      <div class="form-group">
+        <label for="secret">Secrect Questions</label>
+        <select name="" class="form-control" id="secret"
+        ngModel
+        name="secret">
+          <option value="pet">Your first pet?</option>
+          <option value="teacher">Your first teacher?</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+

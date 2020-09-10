@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
+  toggleDdm:boolean = false;
+
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  @Output() featureSelected = new EventEmitter<string>();
+
+
+
+
+  DropdownToggleBtnClicked(){
+    this.toggleDdm = !this.toggleDdm;
+  }
+
+  dropdownItemsClicked(){
+    this.toggleDdm = !this.toggleDdm;
+  }
 }

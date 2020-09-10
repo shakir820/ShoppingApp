@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
-        <button class="btn btn-success">New Recipe</button>
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
     </div>
 </div>
 
@@ -9,19 +9,8 @@
 <div class="row">
     <div class="col-sm-12">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let recipeItem of recipes">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h4>{{recipeItem.name}}</h4>
-                <p>{{recipeItem.description}}</p>
-              </div>
-              <div>
-                  <img [src]="recipeItem.imagePath" class=" img-thumbnail" alt="{{recipeItem.name}}" style="max-height: 150px; object-fit: cover;">
-              </div>
-            </div>
-        </li>
+        <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>
       </ul>
-        <app-recipe-item></app-recipe-item>
     </div>
 </div>
 

@@ -1,1 +1,14 @@
-<p>recipe-item works!</p>
+<a class=" list-group-item btn mb-1"
+[routerLink]="[recipe.id]"
+routerLinkActive="active"
+style="text-align: start;">
+  <div class="d-flex justify-content-between">
+    <div>
+      <h4>{{recipe.name}}</h4>
+      <p>{{recipe.description}}</p>
+    </div>
+    <div>
+        <img [src]="recipe.imagePath" class=" img-thumbnail" alt="{{recipe.name}}" style="height: 150px; width: 100px; object-fit: cover;">
+    </div>
+  </div>
+</a>
