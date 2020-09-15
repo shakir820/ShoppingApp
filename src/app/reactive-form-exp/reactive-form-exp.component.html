@@ -1,0 +1,48 @@
+
+<div class="container">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div [formGroupName]="'userData'">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username"
+          formControlName="username"
+          class="form-control">
+          <span *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
+          class="text-danger small">Enter a valid username</span>
+        </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text"
+        id="email"
+         class="form-control"
+         formControlName="email">
+         <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched"
+         class="text-danger small">Enter a valid email</span>
+      </div>
+      </div>
+
+
+      <div class="radio" *ngFor="let gender of genders">
+        <label>
+          <input type="radio" formControlName="gender"
+          [value]="gender">
+          {{gender}}
+        </label>
+      </div>
+      <div formArrayName="Hobbies">
+        <h4>Your hobbies</h4>
+        <button class="btn btn-primary"
+        type="button"
+        (click)="onAddHobby()">Add Hobby</button>
+        <div class="form-group"
+        *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
+          <input type="text" class="form-control" [formArrayName]="i">
+        </div>
+      </div>
+      <span *ngIf="!signupForm.valid && signupForm.touched"
+      class="text-danger small">Enter valid data</span>
+      <hr>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>

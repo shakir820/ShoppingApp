@@ -11,6 +11,15 @@ export class AppComponent {
   defaultQuestion = 'pet';
   answer  = '';
   genders = ['male', 'female'];
+  user = {
+    username: '',
+    email: '',
+    secretQuestion:'',
+    answer: '',
+    gender: ''
+  };
+  submitted:boolean = false;
+
 
   title = 'ShoppingApp';
   swValue = 5;
@@ -64,6 +73,13 @@ export class AppComponent {
   // }
 
   onSubmit(){
+    this.submitted = true;
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.secretQuestion = this.signupForm.value.userData.secret;
+    this.user.answer = this.signupForm.value.userData.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
+    this.signupForm.reset();
     console.log(this.signupForm);
   }
 }
