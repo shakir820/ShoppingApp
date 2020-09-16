@@ -31,6 +31,7 @@ import { ServerResolverService } from './servers/server/server-resolver.service'
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ReactiveFormExpComponent } from './reactive-form-exp/reactive-form-exp.component';
+import { ReactiveFormExerciseComponent } from './reactive-form-exercise/reactive-form-exercise.component';
 
 
 
@@ -59,7 +60,8 @@ import { ReactiveFormExpComponent } from './reactive-form-exp/reactive-form-exp.
     ErrorPageComponent,
     RecipeStartComponent,
     RecipeEditComponent,
-    ReactiveFormExpComponent
+    ReactiveFormExpComponent,
+    ReactiveFormExerciseComponent
   ],
   imports: [
     BrowserModule,
